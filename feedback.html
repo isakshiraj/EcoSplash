@@ -63,7 +63,50 @@
     </header>
 
   <!----------------------Content----------------------------------->
-  
+
+  <section class="feedbackpage">
+    <h1>Feedback</h1>
+    <!-- <p></p> -->
+</section>
+  <div class="contact-right">
+    <form name="submit-to-google-sheet">
+        <h4>Your Name</h4><p><input type="text" name="Name" placeholder="Your Name" required></p>
+        <br>
+        <h4>Your Email</h4><p><input type="email" name="Email" placeholder="Your email" required></p>
+        <br>
+        <h4>Feedback</h4><p><textarea name="Message" rows="6" placeholder="Feedback"></textarea></p>
+        <br>
+        <button type="submit" class="btn btn2">Submit</button>
+    </form>
+    <span id="msg"></span>
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+<!------------------------form setup for taking response-------------------------------cont scriptURL: link of excel after deploying------------->  
+<script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzkeJ4XLJecSd8-vyqHQwPB_y05UvF5GBeNVy4jnbnfFFbbxXhEaRkrbxMCmKmUv4iPFw/exec'    
+const form = document.forms['submit-to-google-sheet']
+
+const msg = document.getElementById("msg")
+
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+        msg.innerHTML = "Feedback sent successfully"
+        setTimeout(function(){
+            msg.innerHTML = ""
+        },5000)
+        form.reset()
+    })
+    .catch(error => console.error('Error!', error.message))
+})
+</script>
+
 
 
 
@@ -105,8 +148,8 @@
         <div class="footer-section" style="margin-left: -20px;">
             <h3></h3>
             <ul>
-                <li style="margin-top: 30px;"><a href="#">Frequently Asked Questions</a></li>
-                <li><a href="#">Feedback</a></li>
+                <li style="margin-top: 30px;"><a href="faqs.html">Frequently Asked Questions</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
                 <li><a href="#"></a></li>
             </ul>
         </div>
