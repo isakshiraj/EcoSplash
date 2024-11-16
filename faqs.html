@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
+    <link rel="stylesheet" href="faqspage.css">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+
+        <!-- Logo -->
+        <div class="navbar-logo">
+            <a href="#"><img src="logo.png" alt="Logo"></a>
+        </div>
+
+        <!-- Navigation links with dropdown menus -->
+        <ul class="navbar-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Resources <i class="fas fa-caret-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#roadmap">RoadMap</a></li>
+                    <li><a href="#guide">Guide</a></li>
+                    <li><a href="#blogs">Blogs</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Water Footprint <i class="fas fa-caret-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="water_footprint/info_waterfootprint.html">What is water footprint?</a></li>
+                    <li><a href="#how-it-impacts">How it impacts?</a></li>
+                    <li><a href="#how-to-balance-it">How to balance it?</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="timeforaction.html">Time for Action <i class="fas fa-caret-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="timeforaction.html#consumers">What can consumers do?</a></li>
+                    <li><a href="timeforaction.html#companies">What can companies/industries do?</a></li>
+                    <li><a href="timeforaction.html#government">What can Government do?</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="aboutus.html">About Us <i class="fas fa-caret-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="aboutus.html#aim-motto">Aim & Motto</a></li>
+                    <li><a href="aboutus.html#our-team">Our Team</a></li>
+                    <li><a href="aboutus.html#contact-us">Contact Us</a></li>
+                </ul>
+            </li>
+            
+        </ul>
+
+        <!-- Search Bar -->
+        <div class="navbar-search">
+            <input type="text" placeholder="Search...">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+  <!----------------------Content----------------------------------->
+  <h1 class="faqq">Frequently Asked Questions</h1>
+  <p class="fapp">
+      Got a question? We're here to answer! If you don't see<br> 
+      your question here, drop us a line on our Contact page.
+  </p>
+  
+  <!-- FAQ Section -->
+  <div class="container mt-5">
+      <div class="faq-container">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+              <div class="faq-question" onclick="toggleAnswer(1)">
+                  <span>What is a water footprint?</span>
+                  <span class="close-btn" onclick="closeAnswer(event, 1)">×</span>
+              </div>
+              <div class="faq-answer" id="answer1">
+                  A water footprint measures the total volume of water used to produce goods and services, including water used in production, processing, and transportation. It covers everything from the water used in food and clothing to energy production.
+              </div>
+          </div>
+  
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+              <div class="faq-question" onclick="toggleAnswer(2)">
+                  <span>Why should I care about my water footprint?</span>
+                  <span class="close-btn" onclick="closeAnswer(event, 2)">×</span>
+              </div>
+              <div class="faq-answer" id="answer2">
+                  Water is a finite resource, and many regions are facing severe water scarcity. By understanding your water footprint, you can make more informed, sustainable choices that help conserve water and reduce strain on global resources.
+              </div>
+          </div>
+  
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+              <div class="faq-question" onclick="toggleAnswer(3)">
+                  <span>How do I calculate my water footprint?</span>
+                  <span class="close-btn" onclick="closeAnswer(event, 3)">×</span>
+              </div>
+              <div class="faq-answer" id="answer3">
+                  You can easily calculate your water footprint using our Water Footprint Calculator. It takes into account factors like your diet, clothing, energy consumption, and other daily activities to estimate your total water usage.
+              </div>
+          </div>
+  
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+              <div class="faq-question" onclick="toggleAnswer(4)">
+                  <span>What are the biggest contributors to my water footprint?</span>
+                  <span class="close-btn" onclick="closeAnswer(event, 4)">×</span>
+              </div>
+              <div class="faq-answer" id="answer4">
+                  The major contributors to a personal water footprint are food (especially water-intensive products like beef and cotton) and clothing. Agriculture and industrial production also play a significant role in water consumption.
+              </div>
+          </div>
+  
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+              <div class="faq-question" onclick="toggleAnswer(5)">
+                  <span>How can I reduce my water footprint?</span>
+                  <span class="close-btn" onclick="closeAnswer(event, 5)">×</span>
+              </div>
+              <div class="faq-answer" id="answer5">
+                  You can reduce your water footprint by making small changes, such as choosing plant-based foods, buying water-efficient products, conserving water at home, and supporting sustainable brands. Our website provides detailed tips and resources to help you get started.
+              </div>
+          </div>
+  
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+              <div class="faq-question" onclick="toggleAnswer(6)">
+                  <span>How does reducing my water footprint help the environment?</span>
+                  <span class="close-btn" onclick="closeAnswer(event, 6)">×</span>
+              </div>
+              <div class="faq-answer" id="answer6">
+                  Reducing your water footprint helps conserve precious water resources, reduces pollution, and decreases the environmental impact of water extraction. It also contributes to addressing global challenges like water scarcity and ecosystem preservation.
+              </div>
+          </div>
+  
+          <!-- FAQ 7 -->
+          <div class="faq-item">
+              <div class="faq-question" onclick="toggleAnswer(7)">
+                  <span>How does water footprint affect industries?</span>
+                  <span class="close-btn" onclick="closeAnswer(event, 7)">×</span>
+              </div>
+              <div class="faq-answer" id="answer7">
+                  Industries like fashion, agriculture, and energy production have massive water footprints due to the resources required to produce goods. By promoting sustainable practices and encouraging industries to reduce their water consumption, we can help protect global water supplies.
+              </div>
+          </div>
+  
+          <!-- FAQ 8 -->
+          <div class="faq-item">
+              <div class="faq-question" onclick="toggleAnswer(8)">
+                  <span>Is the water footprint of virtual goods (like streaming or gaming) significant?</span>
+                  <span class="close-btn" onclick="closeAnswer(event, 8)">×</span>
+              </div>
+              <div class="faq-answer" id="answer8">
+                  Yes! Digital activities like streaming and gaming also contribute to your water footprint through the energy needed to run data centres. By reducing screen time or choosing more sustainable services, you can lower the water footprint of your digital activities.
+              </div>
+          </div>
+  
+          <!-- FAQ 9 -->
+          <div class="faq-item">
+              <div class="faq-question" onclick="toggleAnswer(9)">
+                  <span>What are the benefits of reducing my water footprint?</span>
+                  <span class="close-btn" onclick="closeAnswer(event, 9)">×</span>
+              </div>
+              <div class="faq-answer" id="answer9">
+                  By reducing your water footprint, you contribute to preserving freshwater resources, saving money, reducing environmental pollution, and supporting a more sustainable future for everyone.
+              </div>
+          </div>
+  
+          <!-- FAQ 10 -->
+          <div class="faq-item">
+              <div class="faq-question" onclick="toggleAnswer(10)">
+                  <span>How accurate is the water footprint calculator?</span>
+                  <span class="close-btn" onclick="closeAnswer(event, 10)">×</span>
+              </div>
+              <div class="faq-answer" id="answer10">
+                  Our Water Footprint Calculator provides an estimate based on commonly available data and averages. While it may not be 100% precise for every individual or region, it gives a reliable overview to help you understand your water consumption patterns and areas where you can reduce usage.
+              </div>
+          </div>
+  
+          <!-- FAQ 11 -->
+          <div class="faq-item">
+              <div class="faq-question" onclick="toggleAnswer(11)">
+                  <span>How often should I calculate my water footprint?</span>
+                  <span class="close-btn" onclick="closeAnswer(event, 11)">×</span>
+              </div>
+              <div class="faq-answer" id="answer11">
+                  We recommend recalculating your water footprint every few months or whenever you make significant lifestyle changes, such as adjusting your diet, changing your consumption habits, or adopting new water-saving practices.
+              </div>
+          </div>
+  
+          <!-- FAQ 12 -->
+          <div class="faq-item">
+              <div class="faq-question" onclick="toggleAnswer(12)">
+                  <span>Can I get more information or support?</span>
+                  <span class="close-btn" onclick="closeAnswer(event, 12)">×</span>
+              </div>
+              <div class="faq-answer" id="answer12">
+                  Yes! If you have any specific questions or need additional support, our team is here to help. You can visit the Contact Us page to send an inquiry, or explore our Resources section for more in-depth articles, guides, and FAQs.
+              </div>
+          </div>
+      </div>
+  </div>
+    
+<br>
+<br>
+<br>
+<br>
+
+
+    <!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <ul>
+                <li><a href="#">Aim & Motto</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section" style="margin-left: -110px;">
+            <h3>Water Footprint</h3>
+            <ul>
+                <li><a href="what_is_waterfootprint.html">What is water footprint?</a></li>
+                <li><a href="#">How it impacts?</a></li>
+                <li><a href="#">How to balance it?</a></li>
+            </ul>
+        </div>
+        <div class="footer-section" style="margin-left: -30px;">
+            <h3>Time for Action</h3>
+            <ul>
+                <li><a href="#">What can consumers do?</a></li>
+                <li><a href="#">What can companies/industries do?</a></li>
+                <li><a href="#">What can Government do?</a></li>
+            </ul>
+        </div>
+        <div class="footer-section" style="margin-left: 20px;">
+            <h3>Legal</h3>
+            <ul>
+                <li><a href="#">Terms & Condition</a></li>
+                <li><a href="#">Privacy & Policies</a></li>
+                <li><a href="#">Disclaimer</a></li>
+            </ul>
+        </div>
+        <div class="footer-section" style="margin-left: -20px;">
+            <h3></h3>
+            <ul>
+                <li style="margin-top: 30px;"><a href="#">Frequently Asked Questions</a></li>
+                <li><a href="#">Feedback</a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-social">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-pinterest"></i></a>
+    </div>
+
+    <div class="footer-bottom">
+        <p>2024 © EcoSplash</p>
+    </div>
+</footer>
+
+<script src="faqscript.js"></script>
+
+</body>
+</html>
