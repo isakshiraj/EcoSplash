@@ -216,13 +216,7 @@ header {
     border: 1px solid #6b8ba4;
 }
 
-/* Ensure the button keeps its color when clicked (focus/active states) */
-.btn2:active,
-.btn2:focus,
-.btn2:visited {
-    background-color:   #ffffff !important;                     box-shadow: none !important;
-    outline: none !important; 
-}
+
 
 
 
@@ -231,7 +225,7 @@ header {
     color: #2b4c65;
     margin-top: 15px;
     display: block;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 
