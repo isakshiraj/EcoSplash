@@ -138,22 +138,22 @@ header {
 
 
 /******************************content************************************************/
-.timeforactionpage {
+.aboutuspage {
     text-align: center;
     padding: 20px;
 }
 
-.timeforactionpage h1 {
+.aboutuspage h1 {
     font-size: 50px;
     color: #333;
     margin: 0;
 }
 
-.timeforactionpage p {
+/* .aboutuspage p {
     font-size: 25px;
     color: #555;
     margin: 10px 0 0;
-}
+} */
 
 .container {
     display: flex;
@@ -161,9 +161,13 @@ header {
 }
 
 .left-section {
-    flex: 0.9;
+    flex: 0.7;
     width: 25%;
-    padding: 20px;
+    padding-left: 70px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    /* background-color: #f9f9f9; */
     background-color: #caf0f8;
     border-right: 2px solid #666;
 }
@@ -190,15 +194,16 @@ header {
 
 .right-section {
     width: 75%;
-    padding-left: 30px;
+    padding-left: 40px;
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-right: 20px;
+    
 }
 
 .right-section h2 {
-    color: navy;
+    color: #333;
     margin-top: 0;
+    font-size: 35px;
 }
 
 .right-section ul {
@@ -206,16 +211,26 @@ header {
     margin-left: 20px;
 }
 
-.right-section ul li {
+.right-section p {
     margin: 10px 0;
     font-size: 18px;
 }
 
-.right-section ul li strong {
-    color: #515050;
+
+#contact-us p{
+    margin-top: 20px;
+    line-height: 0.8;
+    color: #555;
 }
 
+#contact-us p a{
+    text-decoration: none;
+    color: #555;
+}
 
+#contact-us p a:hover{
+    color: #007bff;
+}
 
 /* Footer styles */
 footer {
