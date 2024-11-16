@@ -145,6 +145,27 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+
+    /* Flexbox properties for centering */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.headingmain {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    margin: 0; /* Remove default margin */
+}
+
+.para {
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
 .FirstContent {
