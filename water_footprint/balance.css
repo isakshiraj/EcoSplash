@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -134,169 +133,56 @@ header {
     font-size: 16px;
 }
 
-
-/***********************Content**********************************/
-
-.mainContent {
-    position: relative;
-    width: 100%;
-    height: 90vh;
-    background-image: url('images/homepage.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-
-    /* Flexbox properties for centering */
+/*maincontent*/
+.container {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center items vertically */
-    align-items: center; /* Center items horizontally */
+    margin: 20px;
 }
 
-.headingmain {
-    color: white;
-    text-align: center;
-    font-size: 35px;
-    margin: 0; /* Remove default margin */
-}
-
-.para {
-    color: white;
-    text-align: center;
-    font-size: 25px;
-    margin-left: 150px;
-    margin-right: 150px;
-}
-
-/* .FirstContent {
-    position: relative;
-    width: 100%;
-    height: 70vh;
-    background-color: skyblue;
-    display:flex;
-    justify-content: space-between;
-    gap: 1px;
-} */
-.FirstContent {
-    position: relative;
-    width: 100%;
-    height: 70vh;
-    background-color: skyblue;
-    overflow: hidden; /* Ensures waves don't overflow the section */
-    display: flex;
-    justify-content: space-between;
-    gap: 1px;
-}
-
-/* Water wave container
-.wave-container {
-    position: absolute;
-    bottom: 0;
-    width: 200%;
-    height: 70vh;
-    background: url('images/wave1.jpg') repeat-x; /* Replace wave.svg with your wave pattern image
-    background-size: cover;
-    animation: wave-animation 10s linear infinite;
-}
-
-/* Wave animation 
-@keyframes wave-animation {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-} */
-
-/* Water wave container */
-.wave-container {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 35vh;
-    overflow: hidden; /* Hide excess parts of the wave outside the container */
-}
-
-/* The two wave images */
-.wave {
-    position: absolute;
-    bottom: 0;
-    width: 200%; /* Make it twice as wide to allow for continuous movement */
-    height: 100%;
-    background: url('images/wave1.jpg') repeat-x;
-    animation: wave-animation 3s linear infinite; /* Adjust speed as needed */
-}
-
-/* Wave animation */
-@keyframes wave-animation {
-    0% {
-        transform: translateX(0); /* Start at the initial position */
-    }
-    100% {
-        transform: translateX(-50%); /* Move left by 50% of the width for seamless effect */
-    }
-}
-
-
-
-.card2{
-    margin-top: 37px;
+.left-section {
+    flex: 0.9;
+    width: 25%;
     padding: 20px;
-    border-radius: 10px;
+    background-color: #caf0f8;
+    border-right: 2px solid #666;
+}
+
+.left-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.left-section ul li {
+    margin: 15px 0;
+}
+
+.left-section ul li a {
+    text-decoration: none;
+    color: #0078D4;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.left-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.right-section {
+    width: 75%;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+}
+
+body{
+    background-color:  #caf0f8;
+}
+
+.mainheading{
+    color: #0078D4;
     text-align: center;
-    margin-right: 20px;
-    background-color: white;
-    width: 350px;
-    height: 375px;
-    z-index: 1;
 }
-
-.card3{
-    margin-top: 37px;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    margin-right: 80px;
-    background-color: white;
-    width: 350px;
-    height: 375px;
-    z-index: 1;
-}
-
-.card1{
-    margin-left: 80px;
-    margin-top: 37px;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    margin-right: 20px;
-    background-color: white;
-    width: 350px;
-    height: 375px;
-    z-index: 1;
-
-}
-
-.secondContent {
-    position: relative;
-    width: 100%;
-    height: 60vh;
-    background-color: rgb(198, 231, 245);
-    display:flex;
-    justify-content: space-between;
-    gap: 1px;
-}
-
-.ThirdContent {
-    position: relative;
-    width: 100%;
-    height: 60vh;
-    background-color: rgb(169, 185, 192);
-}
-
-
-
 
 /* Footer styles */
 footer {
@@ -370,4 +256,6 @@ footer {
     font-size: 14px;
     color: #666;
 }
+
+
 
