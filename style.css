@@ -168,15 +168,77 @@ header {
     margin-right: 150px;
 }
 
-.FirstContent {
+/* .FirstContent {
     position: relative;
     width: 100%;
-    height: 60vh;
+    height: 70vh;
     background-color: skyblue;
     display:flex;
     justify-content: space-between;
     gap: 1px;
+} */
+.FirstContent {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    background-color: skyblue;
+    overflow: hidden; /* Ensures waves don't overflow the section */
+    display: flex;
+    justify-content: space-between;
+    gap: 1px;
 }
+
+/* Water wave container
+.wave-container {
+    position: absolute;
+    bottom: 0;
+    width: 200%;
+    height: 70vh;
+    background: url('images/wave1.jpg') repeat-x; /* Replace wave.svg with your wave pattern image
+    background-size: cover;
+    animation: wave-animation 10s linear infinite;
+}
+
+/* Wave animation 
+@keyframes wave-animation {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+} */
+
+/* Water wave container */
+.wave-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 35vh;
+    overflow: hidden; /* Hide excess parts of the wave outside the container */
+}
+
+/* The two wave images */
+.wave {
+    position: absolute;
+    bottom: 0;
+    width: 200%; /* Make it twice as wide to allow for continuous movement */
+    height: 100%;
+    background: url('images/wave1.jpg') repeat-x;
+    animation: wave-animation 3s linear infinite; /* Adjust speed as needed */
+}
+
+/* Wave animation */
+@keyframes wave-animation {
+    0% {
+        transform: translateX(0); /* Start at the initial position */
+    }
+    100% {
+        transform: translateX(-50%); /* Move left by 50% of the width for seamless effect */
+    }
+}
+
+
 
 .card2{
     margin-top: 37px;
@@ -187,6 +249,7 @@ header {
     background-color: white;
     width: 350px;
     height: 375px;
+    z-index: 1;
 }
 
 .card3{
@@ -198,6 +261,7 @@ header {
     background-color: white;
     width: 350px;
     height: 375px;
+    z-index: 1;
 }
 
 .card1{
@@ -210,6 +274,7 @@ header {
     background-color: white;
     width: 350px;
     height: 375px;
+    z-index: 1;
 
 }
 
