@@ -135,7 +135,7 @@ header {
 }
 
 
-/***********************Content**********************************/
+/***********************Main Content**********************************/
 
 .mainContent {
     position: relative;
@@ -157,7 +157,7 @@ header {
     color: white;
     text-align: center;
     font-size: 35px;
-    margin: 0; /* Remove default margin */
+    margin-top: 10px;
 }
 
 .para {
@@ -168,15 +168,73 @@ header {
     margin-right: 150px;
 }
 
-/* .FirstContent {
+/* Style the text inside the button */
+.content-button-link {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .water-drop-wrapper {
     position: relative;
+    display: inline-block;
+    transform: rotate(45deg); /* Rotate the droplet permanently */
+    width: 150px;
+    height: 150px;
+  }
+  
+  .water-drop-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 70vh;
-    background-color: skyblue;
-    display:flex;
-    justify-content: space-between;
-    gap: 1px;
-} */
+    height: 100%;
+    background: linear-gradient(135deg, #00bcd4 0%, #03a9f4 100%);
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    border-radius: 0 50% 50%;
+    clip-path: ellipse(1000% 0%, 100% 75%, 50% 100%, 0% 75%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    animation: water-drop-bounce 2s infinite;
+    transform: rotate(0deg);
+  }
+  
+  /* Hover effect */
+  .water-drop-button:hover {
+    background: linear-gradient(135deg, #0097a7 0%, #0288d1 100%);
+  }
+  
+  /* Bouncing Animation */
+  @keyframes water-drop-bounce {
+    0%, 100% {
+      transform: rotate(0deg) translateY(0);
+    }
+    50% {
+      transform: rotate(0deg) translateY(0);
+    }
+  }
+  
+  /* Style text content */
+  .water-drop-button span {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    padding-top: 2px;
+    padding-left: 2px;
+    padding-right: 18px;
+    margin-top: -20px;
+    transform: rotate(-45deg);
+  }
+
+
+
+
+
+
+/****************************First Content*******************************************/
 .FirstContent {
     position: relative;
     width: 100%;
@@ -188,26 +246,7 @@ header {
     gap: 1px;
 }
 
-/* Water wave container
-.wave-container {
-    position: absolute;
-    bottom: 0;
-    width: 200%;
-    height: 70vh;
-    background: url('images/wave1.jpg') repeat-x; /* Replace wave.svg with your wave pattern image
-    background-size: cover;
-    animation: wave-animation 10s linear infinite;
-}
 
-/* Wave animation 
-@keyframes wave-animation {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-} */
 
 /* Water wave container */
 .wave-container {
@@ -278,6 +317,8 @@ header {
 
 }
 
+/*********************Second Content**************************************/
+
 .secondContent {
     position: relative;
     width: 100%;
@@ -287,6 +328,11 @@ header {
     justify-content: space-between;
     gap: 1px;
 }
+
+
+
+
+/***************************Third Content*********************************/
 
 .ThirdContent {
     position: relative;
