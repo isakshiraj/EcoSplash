@@ -138,32 +138,36 @@ header {
 
 /***********************Content**********************************/
 
+/***********************Content**********************************/
+
 .feedbackpage {
     text-align: center;
     padding: 20px;
+    background: linear-gradient(to bottom, #e0f7fa, #c3f1f8);
 }
 
 .feedbackpage h1 {
-    font-size: 50px;
-    color: #333;
+    font-size: 45px;
+    color: black;
     margin: 0;
+    margin-top: 12px;
 }
-
 
 /* Feedback form styles */
 .contact-right {
     max-width: 700px;
-    height: 85vh;
+    height: 65vh;
     margin-top: 20px;
-    margin-left: 300px;
+    margin-left: 418px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Light shadow for depth */
-    background-color: white;
+    background-color: #c3f1f8 ; /* lighter than white, but distinct */
+    border: 1px solid #b0dfe8; /* optional soft border */
 }
 
 .contact-right h4 {
-    color: black; /* Dark gray color for section headers */
+    color: #034f4f;
     margin-bottom: -10px; /* Space between headers and input fields */
     font-size: 20px;
     font-weight: 600;
@@ -175,31 +179,30 @@ header {
 
 .contact-right textarea {
     width: 100%;
-    padding: 5px;
-    border: 1px solid #95B4CC; 
+    padding: 10px;
     border-radius: 10px;
     resize: vertical; /* Allow vertical resizing of textarea */
-    background-color: #95B4CC;
-    color: black;
+    background-color: #ffffff; /* Changed for better contrast */
+    border: 1px solid #088395;
+    color: #003B5B; /* Improved readability */
     font-size: 18px;
-    padding: 10px;
 }
 
 .contact-right input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #95B4CC;
+    background-color: #ffffff; /* Changed for better contrast */
+    border: 1px solid #088395;
+    color: #003B5B; /* Improved readability */
     border-radius: 10px;
     resize: vertical; /* Allow vertical resizing of textarea */
-    background-color: #95B4CC;
-    color: black;
     font-size: 18px;
 }
 
 .btn2 {
-    background-color: #6b8ba4; /* Greenish color for submit button */
-    color: #ffffff; /* White text color for button */
-    border: 1px solid #6b8ba4;
+    background-color: #088395;
+    border: 1px solid #088395;
+    color: #ffffff;
     padding: 10px 20px;
     font-size: 18px;
     border-radius: 8px;
@@ -209,16 +212,12 @@ header {
 }
 
 .btn2:hover {
-    background-color: #ffffff; /* Darker greenish color on hover */
-    color: #6b8ba4;
+    background-color: #ffffff;
+    color: #088395;
+    border: 1px solid #088395;
     font-size: 20px;
     font-weight: 700;
-    border: 1px solid #6b8ba4;
 }
-
-
-
-
 
 /*********agter submitting  will print*************/
 #msg {
