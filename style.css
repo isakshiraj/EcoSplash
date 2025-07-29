@@ -329,7 +329,56 @@ header {
     gap: 1px;
 }
 
+.stats-section {
+  background-color: #e8f7f5;
+  padding: 60px 20px;
+  text-align: center;
+}
 
+.section-title {
+  font-size: 2.2rem;
+  color: #034f4f;
+  margin-bottom: 40px;
+}
+
+.stats-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px 20px;
+  width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.stat-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.stat-card h3 {
+  font-size: 1.8rem;
+  color: #0099a8;
+  margin: 0;
+}
+
+.stat-card p {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 10px;
+}
 
 
 /***************************Third Content*********************************/
