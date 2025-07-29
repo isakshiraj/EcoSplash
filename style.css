@@ -232,13 +232,11 @@ header {
 
 
 
-
-
 /****************************First Content*******************************************/
 .FirstContent {
     position: relative;
     width: 100%;
-    height: 70vh;
+    height: 50vh;
     background-color: skyblue;
     overflow: hidden; /* Ensures waves don't overflow the section */
     display: flex;
@@ -277,45 +275,49 @@ header {
     }
 }
 
+.gradient-blue-green {
+    height: 40px;
+    width: 100%;
+    background: linear-gradient(to bottom, skyblue 0%, #cdeac0 100%);
+}
 
 
-.card2{
+
+.card1 {
+    margin-left: 150px;         /* reduced from 80px */
     margin-top: 37px;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    margin-right: 20px;
     background-color: white;
     width: 350px;
     height: 375px;
     z-index: 1;
 }
 
-.card3{
+.card2 {
     margin-top: 37px;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    margin-right: 80px;
     background-color: white;
     width: 350px;
     height: 375px;
     z-index: 1;
 }
 
-.card1{
-    margin-left: 80px;
+.card3 {
     margin-top: 37px;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    margin-right: 20px;
+    margin-right: 135px;       /* reduced from 80px */
     background-color: white;
     width: 350px;
     height: 375px;
     z-index: 1;
-
 }
+
 
 /********************* Second Content (Stats Section) **************************************/
 
@@ -395,6 +397,7 @@ header {
   text-align: center;
   padding: 60px 20px;
   background-color: #f7f1bc; /* matching outer wrapper */
+  background: linear-gradient(to bottom,  #cdeac0 0%, #fefae0 100%);
 }
 
 .section-title {
