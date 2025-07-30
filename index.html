@@ -6,6 +6,9 @@
     <title>EcoSplash Homepage</title>
     <link rel="stylesheet" href="style.css">
     
+    <!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 </head>
@@ -138,13 +141,13 @@
 
     <!--ThirdContent--->
 
-<section class="myth-fact-section"><br>
+<section class="myth-fact-section">
   <h2 class="section-title">Think You Know Water?</h2>
   <h3 class="section-subtitle">  Tap or hover on the cards to uncover the truth.</h3><br>
 
   <div class="flip-card-container">
     
-    <div class="flip-card">
+    <div class="flip-card" data-aos="fade-up" data-aos-duration="800">
       <div class="flip-card-inner">
         <div class="flip-card-front">
           <p>📦 <strong>Myth:</strong> Online shopping is harmless.</p>
@@ -155,7 +158,7 @@
       </div>
     </div>
 
-    <div class="flip-card">
+    <div class="flip-card" data-aos="fade-up" data-aos-duration="600">
       <div class="flip-card-inner">
         <div class="flip-card-front">
           <p>🚱 <strong>Myth:</strong> Drinking less water saves the planet.</p>
@@ -166,7 +169,7 @@
       </div>
     </div>
 
-    <div class="flip-card">
+    <div class="flip-card" data-aos="fade-up" data-aos-duration="800">
       <div class="flip-card-inner">
         <div class="flip-card-front">
           <p>🍔 <strong>Myth:</strong> Fast food has no impact on water.</p>
@@ -232,6 +235,12 @@
         <p>2024 © EcoSplash</p>
     </div>
 </footer>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 
 </body>

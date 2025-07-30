@@ -278,7 +278,7 @@ header {
 .gradient-blue-green {
     height: 40px;
     width: 100%;
-    background: linear-gradient(to bottom, skyblue 0%, #cdeac0 100%);
+    background: linear-gradient(to bottom, skyblue, #CDEAC0);
 }
 
 
@@ -453,7 +453,7 @@ header {
   position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 12px;
+  border-radius: 20px;
   backface-visibility: hidden;
   display: flex;
   align-items: center;
@@ -463,8 +463,8 @@ header {
 }
 
 .flip-card-front {
-  background-color: #fffdf5; /* soft cream */
-  color: #444;
+  background-color: white; /* soft cream */
+  color: black;
 }
 
 .flip-card-back {
