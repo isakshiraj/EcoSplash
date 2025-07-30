@@ -68,6 +68,71 @@ header {
     font-size: 10px;
 }
 
+/*maincontent*/
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  padding: 30px 20px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.water-footprint-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.water-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  gap: 20px;
+}
+.water-section .text {
+  flex: 1;
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+.water-section .image {
+  flex: 1;
+  text-align: center;
+}
+
+.water-section .image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Alternating layout */
+.water-section.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .water-section,
+  .water-section.reverse {
+    flex-direction: column !important;
+  }
+
+  .water-section .text,
+  .water-section .image {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+
 /* Dropdown Menu Styling */
 .dropdown-menu {
     display: none;
@@ -227,4 +292,13 @@ footer {
 }
 
 
+.water-section.reverse {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  gap: 20px;
+}
 
