@@ -20,6 +20,41 @@ header {
     border-bottom: 1px solid #ddd;
 }
 
+/*cards*/
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.impact-card {
+    background-color: #f0f8ff; /* light blue background */
+    border: 2px solid #0077b6;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.impact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+}
+
+.impact-card h2 {
+    color: #023e8a;
+    margin-bottom: 15px;
+}
+
+.impact-card ul {
+    padding-left: 20px;
+}
+
+.impact-card ul li {
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
 
 
 /* Navbar styling */
@@ -141,7 +176,7 @@ body{
 }
 
 .mainheading{
-    color: #0078D4;
+    color: #011f45 ;
     text-align: center;
 }
 
@@ -154,6 +189,7 @@ body{
     flex: 0.9;
     width: 25%;
     padding: 20px;
+    margin-top: 70px;
     background-color: #caf0f8;
     border-right: 2px solid #666;
 }
@@ -169,7 +205,7 @@ body{
 
 .left-section ul li a {
     text-decoration: none;
-    color: #0078D4;
+    color: #011f45 ;
     font-weight: bold;
     font-size: 20px;
 }
@@ -184,6 +220,26 @@ body{
     padding-top: 20px;
     padding-bottom: 20px;
     padding-right: 20px;
+}
+
+/*images*/
+
+.impact-images {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 20px;
+  flex-wrap: wrap; /* helps responsiveness */
+}
+
+.impact-images img {
+  width: 100%;
+  max-width: 45%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 /* Footer styles */
