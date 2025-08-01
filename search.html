@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Search Results</title>
   <style>
-    body { font-family: Arial, sans-serif; padding: 2rem; background: #f4f4f4; }
-    .result { background: white; padding: 1rem; margin-bottom: 1rem; border-radius: 8px; }
-    .result a { text-decoration: none; font-weight: bold; color: #0077b6; }
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background: #f4f4f4;
+    }
+    .result {
+      background: white;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .result a {
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #0077b6;
+    }
+    .result p {
+      margin-top: 0.5rem;
+      color: #444;
+    }
   </style>
 </head>
 <body>
@@ -18,60 +37,50 @@
     const resultsDiv = document.getElementById("results");
 
     const pages = [
-      {
-        title: "Home",
-        url: "index.html",
-        description: "Introduction to water conservation and footprint awareness",
-        keywords: "home intro awareness"
-      },
-      {
-        title: "Water Footprint",
-        url: "waterfootprint.html",
-        description: "Learn about water footprint and its global impact",
-        keywords: "footprint calculator usage"
-      },
-      {
-        title: "Time for Action",
-        url: "timeforaction.html",
-        description: "Consumer tips, industry actions, and government policies",
-        keywords: "consumer government industry changes action tips"
-      },
-      {
-        title: "Resources",
-        url: "resources.html",
-        description: "Explore articles, reports, and tools to learn more",
-        keywords: "resources data links reports articles"
-      },
-      {
-        title: "About Us",
-        url: "about.html",
-        description: "Meet the team behind the mission",
-        keywords: "about team mission vision contact"
-      }
+      { title: "Home", url: "index.html" },
+      { title: "Water Footprint", url: "waterfootprint.html" },
+      { title: "Time for Action", url: "timeforaction.html" },
+      { title: "Resources", url: "resources.html" },
+      { title: "About Us", url: "about.html" }
     ];
 
     if (!query) {
       resultsDiv.innerHTML = "<p>Please enter a search query.</p>";
     } else {
-      const matches = pages.filter(page =>
-        page.keywords.toLowerCase().includes(query) ||
-        page.title.toLowerCase().includes(query) ||
-        page.description.toLowerCase().includes(query)
-      );
+      Promise.all(
+        pages.map(page =>
+          fetch(page.url)
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const doc = parser.parseFromString(html, "text/html");
 
-      if (matches.length === 0) {
-        resultsDiv.innerHTML = `<p>No results found for "<strong>${query}</strong>".</p>`;
-      } else {
-        resultsDiv.innerHTML = "";
-        matches.forEach(page => {
-          resultsDiv.innerHTML += `
-            <div class="result">
-              <a href="${page.url}">${page.title}</a>
-              <p>${page.description}</p>
-            </div>
-          `;
-        });
-      }
+              const text = doc.body?.innerText?.toLowerCase() || "";
+
+              if (text.includes(query)) {
+                // Try to get the first meaningful paragraph
+                let preview = doc.querySelector("p")?.innerText || "No description available.";
+
+                return `
+                  <div class="result">
+                    <a href="${page.url}">${page.title}</a>
+                    <p>${preview}</p>
+                  </div>
+                `;
+              }
+
+              return null;
+            })
+            .catch(() => null)
+        )
+      ).then(results => {
+        const filtered = results.filter(Boolean);
+        if (filtered.length > 0) {
+          resultsDiv.innerHTML = filtered.join("");
+        } else {
+          resultsDiv.innerHTML = `<p>No results found for "<strong>${query}</strong>".</p>`;
+        }
+      });
     }
   </script>
 </body>
