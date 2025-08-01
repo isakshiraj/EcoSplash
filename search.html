@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Results</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2rem; background: #f4f4f4; }
+    .result { background: white; padding: 1rem; margin-bottom: 1rem; border-radius: 8px; }
+    .result a { text-decoration: none; font-weight: bold; color: #0077b6; }
+  </style>
+</head>
+<body>
+  <h1>Search Results</h1>
+  <div id="results">Loading...</div>
+
+  <script>
+    const query = new URLSearchParams(window.location.search).get("q")?.toLowerCase();
+    const resultsDiv = document.getElementById("results");
+
+    const pages = [
+      {
+        title: "Home",
+        url: "index.html",
+        description: "Introduction to water conservation and footprint awareness",
+        keywords: "home intro awareness"
+      },
+      {
+        title: "Water Footprint",
+        url: "waterfootprint.html",
+        description: "Learn about water footprint and its global impact",
+        keywords: "footprint calculator usage"
+      },
+      {
+        title: "Time for Action",
+        url: "timeforaction.html",
+        description: "Consumer tips, industry actions, and government policies",
+        keywords: "consumer government industry changes action tips"
+      },
+      {
+        title: "Resources",
+        url: "resources.html",
+        description: "Explore articles, reports, and tools to learn more",
+        keywords: "resources data links reports articles"
+      },
+      {
+        title: "About Us",
+        url: "about.html",
+        description: "Meet the team behind the mission",
+        keywords: "about team mission vision contact"
+      }
+    ];
+
+    if (!query) {
+      resultsDiv.innerHTML = "<p>Please enter a search query.</p>";
+    } else {
+      const matches = pages.filter(page =>
+        page.keywords.toLowerCase().includes(query) ||
+        page.title.toLowerCase().includes(query) ||
+        page.description.toLowerCase().includes(query)
+      );
+
+      if (matches.length === 0) {
+        resultsDiv.innerHTML = `<p>No results found for "<strong>${query}</strong>".</p>`;
+      } else {
+        resultsDiv.innerHTML = "";
+        matches.forEach(page => {
+          resultsDiv.innerHTML += `
+            <div class="result">
+              <a href="${page.url}">${page.title}</a>
+              <p>${page.description}</p>
+            </div>
+          `;
+        });
+      }
+    }
+  </script>
+</body>
+</html>
