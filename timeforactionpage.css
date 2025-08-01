@@ -337,3 +337,25 @@ footer {
     margin-top: 10px;
   }
 }
+
+/*image*/
+
+/*images*/
+
+.impact-images {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 20px;
+  flex-wrap: wrap; /* helps responsiveness */
+}
+
+.impact-images img {
+  width: 100%;
+  max-width: 45%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-left: 10px;
+  margin-right: 10px;
+}
